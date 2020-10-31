@@ -54,12 +54,6 @@ class LandingView extends React.Component {
   }
 
   getAccessToken = async () => {
-    var tokenSomething = await this.props.auth0.getIdTokenClaims()
-    console.log("getIdTokenClaims")
-    console.log(tokenSomething.__raw)
-    
-    console.log(" ")
-
     var token = await this.props.auth0.getAccessTokenSilently()
     console.log("getAccessTokenSilently")
     console.log(token)
