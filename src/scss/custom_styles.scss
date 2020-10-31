@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.12.0/css/all.css');
+
+:root{
+    --lower_b:#1C2025;
+    --middle_b: #282C34;
+    --high_b: #849BAF;
+    --bnns:#18A297;
+    --bnns800:#019488;
+    --bnns600:#01AA9C;
+    --bnns400:#02B8A9;
+    --bnns200:#01C6B6;
+    --prpl:#3F51B5;
+    --prpl800:#2A3DA4;
+    --prpl600:#4A5ECA;
+    --prpl400:#596DDA;
+    --prpl200: #8291E2;
+    --err:#F50057;
+    --err800:#DA1058;
+    --err600:#FF1568;
+    --err400:#FD3F83;
+    --err200:#FF6199;
+}
+
+.globalContainerCtrl{
+    background-color: var(--lower_b);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif !important;
+    overflow: hidden;
+}
+
+.displayContainerRow{
+    width: 90%;
+    min-height: 90vh;
+    // border: solid red 1px;
+    display: flex;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.contentCtrl{
+    // border: solid yellowgreen 1px;
+    max-width: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    order: 0;
+}
+
+.contentCtrl img{
+    max-width: 160px;
+    margin-bottom: 40px;
+}
+
+.contentCtrl span{
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.primaryButton{
+    background-color: var(--prpl);
+    color: white;
+    min-width: 140px;
+    max-width: 150px;
+    height: 48px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(42,61,164,.7a);
+    margin-top: 30px;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.secondaryButton{
+    background-color: var(--high_b);
+    color: var(--lower_b);
+    min-width: 140px;
+    max-width: 150px;
+    height: 48px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(0,0,0,.3);
+    margin-top: 30px;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 8px!important;
+}
+
+.primaryButton:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(42,61,164, 0.2);
+}
+
+.secondaryButton:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0,0,0, 0.2);
+}
+
+.illustrationCtrl{
+    // border: solid red 1px;
+    width: 500px;
+}
+
+.noDisplayedImg{
+    display: none!important;
+}
+
+.globalCntnrPaddedCtrl{
+    // border: solid red 1px;
+    padding-left: 60px;
+}
+
+
+////////////////////////////////////////////////////////////////// nav styles
+.navContainerCtrl{
+    width: 60px;
+    min-height: 100vh;
+    background-color: var(--middle_b);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    position: fixed;
+    left: 0px;
+    // text-overflow: ellipsis;
+    // overflow: hidden;
+}
+
+.avatarNavCtrl{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: var(--high_b);
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.usrNameCtrl{
+    margin-top: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 60px!important;
+    text-overflow: ellipsis;
+    font-size: 10px;
+    padding: 3px;
+    overflow: hidden;
+    // border: solid 1px red;
+}
+
+.wrapperDividerCtrl{
+    background-color: var(--prpl);
+    width:70%;
+    height: 4px;
+    border: none!important;
+    outline: none!important;
+    border-radius: 5px;
+}
+
+.itemNavCtrl{
+    // border: yellowgreen solid 1px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+
+.itemNavCtrl_disabled{
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.itemNavCtrl_disabled:hover{
+    transform: scale(1,1)!important;
+    color: white!important;
+}
+
+.itemNavCtrl:hover{
+    transform: scale(1.2,1.2);
+    color: var(--prpl600);
+}
+
+.hideNavCtrl{
+    display: none!important;
+}
+
+.stepperContainerCtrl{
+    // border: solid red 1px;
+}
+.jumboTitleCtrl{
+    display: block;
+    text-align: left;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.prpleTextCtrl{
+    color: var(--prpl200);
+}
+
+.bodyTextCtrl{
+    // max-width: 600px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+}
+
+.stepsWrapperCtrl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    // border: solid pink 1px;
+    max-width: 100px;
+    margin-top: 20px;
+}
+
+.stepDotCtrl{
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border: solid 1px var(--prpl400);
+    background-color: var(--middle_b);
+}
+
+.activeStepCtrl{
+    background-color: var(--prpl400);
+}
+
+.cardCtrl{
+    background-color: var(--middle_b);
+    border-radius: 7px;
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    margin: 5px;
+    margin-top: 10px;
+    padding: 20px;
+    width: 500px;
+}
+
+.mainInputCtrl .MuiFormLabel-root,.mainInputCtrl .MuiInputBase-root{
+    color: var(--high_b);
+}
+
+.mainInputCtrl p{
+    color: white;
+    opacity: .3;
+}
+
+.floatedButtonCtrl{
+    position: relative;
+    // bottom: -30px;
+    right: 0px;
+}
+
+.buttonsFloatCtrl{
+    // border: solid red 1px;
+    position: absolute;
+    display: flex;
+    width: 500px;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.noMarginCtrl{
+    margin: 0px;
+}
+
+.selectFrmCtrl{
+    width: 100%;
+}
+
+.selectFrmCtrl .MuiInputLabel-shrink{
+    background-color: var(--middle_b);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.selectFrmCtrl .Mui-focused,.selectFrmCtrl .MuiInputLabel-filled{
+    background-color: var(--middle_b)!important;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.selectFrmCtrl .MuiInputBase-root,.selectFrmCtrl  .MuiFormLabel-root{
+    text-align: left!important;
+    color: var(--high_b);
+}
+.spacerCtrl{
+    height: 25px;
+}
+
+.centeredTextCtrl{
+    text-align: center!important;
+    // border: solid red 1px;
+}
+
+.jumboImgButtonCtrl{
+    background-color: var(--middle_b);
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+    padding: 15px;
+    margin:15px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    // flex-wrap: wrap;
+    padding-bottom: 35px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+
+.jumboImgButtonCtrl:hover,.linkTextCtrl:hover{
+    transform: scale(1.1,1.1) ;
+    // transform: perspective(50px);
+    box-shadow: 0px 0px 20px rgba(0,0,0,.1);
+    filter: brightness(120%);
+}
+
+
+#smallImageBtnCtrl1{
+    max-width: 100px;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+#smallImageBtnCtrl2{
+    max-width: 130px;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+.jumboButtonTitle{
+    text-transform: uppercase;
+    font-size: 20;
+    color: var(--prpl);
+    // border: solid red 1px;
+    text-align: left!important;
+    font-weight: 400;
+}
+
+.jumboButtonBody{
+    max-width: 400px;
+    margin-top: -10px;
+    
+}
+
+.linkTextCtrl{
+    display: block;
+    color: var(--prpl);
+    padding-top: 25px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
