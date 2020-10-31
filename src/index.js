@@ -10,6 +10,8 @@ ReactDOM.render(
       domain="bonnus.auth0.com"
       clientId="YoYMmSWfrssl6UMsl3kX7CqJqYCp0tAE"
       redirectUri={window.location.origin}
+      audience="https://fw.bonnussolutions.com"
+      scope="openid"
     >
       <App />
     </Auth0Provider>,

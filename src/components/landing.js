@@ -28,8 +28,40 @@ class LandingView extends React.Component {
     this.props.auth0.loginWithRedirect()
   }
 
+  fetchBuilder = async(token) => {
+    const settings = {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization' : `Bearer ${token}`
+        }
+    };
+
+    try{
+      
+      const response = await fetch('https://flatwhiteapidev.azurewebsites.net/api/User', settings);
+      const result = await response.json();
+
+      console.log("response")
+      console.log(response)
+      console.log("result")
+      console.log(result)
+    } catch(error){
+      console.log("error")
+      console.log(error)
+    }
+  }
+
   getAccessToken = async () => {
+    var tokenSomething = await this.props.auth0.getIdTokenClaims()
+    console.log("getIdTokenClaims")
+    console.log(tokenSomething.__raw)
+    
+    console.log(" ")
+
     var token = await this.props.auth0.getAccessTokenSilently()
+    console.log("getAccessTokenSilently")
     console.log(token)
   }
 
@@ -43,6 +75,10 @@ class LandingView extends React.Component {
     }
 
     if (this.props.auth0.user){
+      console.log("Auth")
+      console.log(this.props.auth0)
+
+      //console.log(this.props.auth0)
       this.getAccessToken()
       return (
       <div style={{color : "#ffffff"}}>
