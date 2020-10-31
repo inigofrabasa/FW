@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.12.0/css/all.css');
+
+:root{
+    --lower_b:#1C2025;
+    --middle_b: #282C34;
+    --high_b: #849BAF;
+    --bnns:#18A297;
+    --bnns800:#019488;
+    --bnns600:#01AA9C;
+    --bnns400:#02B8A9;
+    --bnns200:#01C6B6;
+    --prpl:#3F51B5;
+    --prpl800:#2A3DA4;
+    --prpl600:#4A5ECA;
+    --prpl400:#596DDA;
+    --prpl200: #8291E2;
+    --err:#F50057;
+    --err800:#DA1058;
+    --err600:#FF1568;
+    --err400:#FD3F83;
+    --err200:#FF6199;
+}
+
+.globalContainerCtrl{
+    background-color: var(--lower_b);
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.displayContainerRow{
+    width: 90%;
+    min-height: 90vh;
+    // border: solid red 1px;
+    display: flex;
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.contentCtrl{
+    // border: solid yellowgreen 1px;
+    max-width: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    order: 0;
+}
+
+.contentCtrl img{
+    max-width: 160px;
+    margin-bottom: 40px;
+}
+
+.contentCtrl span{
+    display: block;
+    text-align: left;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.primaryButton{
+    background-color: var(--prpl);
+    color: white;
+    min-width: 140px;
+    max-width: 150px;
+    height: 48px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px rgba(42,61,164,.7a);
+    margin-top: 30px;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.primaryButton:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(42,61,164, 0.2);
+}
+
+.illustrationCtrl{
+    // border: solid red 1px;
+    width: 500px;
+}
